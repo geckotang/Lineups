@@ -46,6 +46,10 @@
       });
       // グループごとに最大の高さを求めて、高さをそろえる
       _.each(rows, function(row, idx) {
+        if (row.length===1) {
+          $(row[0].el).height('auto');
+          return;
+        }
         var max = _.max(row, function(col){
           return col.height;
         }).height;
