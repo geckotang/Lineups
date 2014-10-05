@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="ja">
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.container {
+  border: 5px solid #000;
+}
+.item {
+  display: inline-block;
+  border: 5px solid #000;
+  width: 200px;
+  vertical-align: top;
+  margin: 5px;
+}
+img {
+  vertical-align: top;
+}
+</style>
+<script src="jquery.min.js"></script>
+<script src="underscore.js"></script>
+<script src="imagesloaded.pkgd.js"></script>
+<script src="lineups.js"></script>
+<script>
+$(function(){
+  var lineups = new Lineups([
+    '.item'
+  ],{
+    resize: true
+  });
+  $('.container').imagesLoaded(function() {
+    lineups.refreshAll();
+  });
+});
+</script>
+</head>
+<body>
+<div class="container"><!--
+--><div class="item">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </div><!--
+--><div class="item">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </div><!--
+--><div class="item">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </div><!--
+--><div class="item">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </div><!--
+--><div class="item">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. <img src="160x160.jpg" alt=""></div><!--
+--><div class="item">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </div><!--
+--><div class="item">The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. The quick brown fox jumps over the lazy dog. </div><!--
+--></div>
+</body>
+</html>
+
