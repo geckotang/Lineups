@@ -23,7 +23,7 @@
       return this;
     },
     reset: function() {
-      this.el.css('height', '');
+      this.el.css('min-height', '');
       return this;
     },
     refresh: function() {
@@ -53,7 +53,7 @@
           return col.height;
         }).height;
         _.each(row, function(col, idx) {
-          $(col.el).height(max);
+          $(col.el).css('min-height', max);
         });
       });
 
